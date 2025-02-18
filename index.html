@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ashwani Balakrishnan Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .5rem;
+}
+
+.skill-mf .progress .progress-bar {
+  /* height: .7rem; */
+  height: 0.5rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Ashwani Balakrishnan</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About Me</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:none;"> <!-- Profile picture-->
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hi there!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Ashwani Balakrishnan Neminimadathil</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Full Stack Developer	',
+						'Former Software Engineer@TCS   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>Full Stack Developer<Analysed ad campaigns, clickstream, and customer surveys data, identified an in/h2> commentd by ash-->
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><p><a href="https://drive.google.com/file/d/1BhjVZZLDoGEinMHDGSg83WAOHagVnvMs/view?usp=drive_link" class="btn btn-primary py-3 px-4">Resume</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/IMG_7155.png" class="img-fluid rounded b-shadow-a" alt=""> <!-- second image -->
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<br>
+										<!--<p><span class="title-s">Name: </span> <span>Rishabh Mishra</span></p>-->
+										<!-- <p><span class="title-s">Job Role: </span> <span>Full Stack Developer</span></p> -->
+										<p><span class="title-s">Experience: </span><span>4 Years 1 month</span></p>
+										<p><span class="title-s">Address: </span> <span>Atlanta, Georgia, USA</span></p>
+										<div class="container">
+											<ul class="ftco-footer-social list-unstyled justify-content-center align-items-center">
+													  <li class="ftco-animate"><a href="https://www.linkedin.com/in/ashwani-nbalakrishnan/"><span class="icon-linkedin"></span></a></li>  
+													  <li class="ftco-animate"><a href="https://github.com/ashwani89n"><span class="icon-github"></span></a></li>
+													  <li class="ftco-animate"><a href="mailto:ashwani.nb9@gmail.com"><span class="icon-envelope"></span></a></li>
+													</ul>
+												<br>
+										   </div>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Python</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Java</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Object Oriented Programming</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Structures</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Algorithms</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>HTML/CSS</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>JavaScript</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>React</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>NodeJS</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p style="text-align: justify;">I am a graduate student pursuing a Master’s in Computer Science at Georgia State University, specializing in AI, NLP, and cloud-native systems. 
+									With 4+ years of experience as a Software Engineer at Tata Consultancy Services, I have a proven track record of designing and deploying scalable, high-impact solutions in the banking industry. 
+									Skilled in Java, Python, SSQL, PL/SQL, React, Node.js, and AWS, I have successfully built RESTful APIs, real-time analytics dashboards, and AI-driven applications, driving measurable business outcomes and operational excellence. 
+									Recognized for leadership, I led cross-functional teams to exceed targets, earning “TCS Best Team” and “Employee of the Quarter” awards. 
+									<br><br>Actively seeking full-time roles in software engineering, full-stack development, or cloud-native systems. 
+									Passionate about leveraging emerging technologies to solve complex problems and deliver innovative solutions.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Software Development</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master's in Computer Science</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Malayalam</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>AWS (EC2, S3) , VS Code, PL/SQL, Flutter, Dart, Flask, GraphQL, RESTful APIs, Docker, Kubernetes</span></li>
+									<li class="d-flex"><span>Databases:</span> <span>Oracle, PostgreSQL , MySQL, MongoDB, Firebase</span></li>
+									<li class="d-flex"><span>Methodologies:</span> <span>Agile, Scrum , DevOps</span></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">30</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section id="resume-section">
+    	<div class="container">
+    		<!--<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+          </div>
+        </div> -->
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2023 - Present</span>
+						<h2>Graduate Research Assistant</h2>
+						<span class="position">Georgia State University, College of Arts and Science</span>
+						<p class="mt-4"><!--Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International. -->
+							<ul>
+								<li>Developed a website using React (ES6), Redux Toolkit, and Material UI, integrated with Google Firebase to render interactive charts
+									including timelines, bar charts, and geographic maps for visualizing past 5 years car sales data.</li>
+								<li>Developed a real-time analytics dashboard with Python, Flask, and Chart.js to monitor event engagement, boosting attendance by 20%.</li>
+								<li>Delivered tutorials and created training materials on Advanced Data Structures, Algorithms, and OOP topics in Python for 100+ students.</li>
+							</ul>
+						</p>
+					</div>
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jul 2019 - Jul 2021</span>
+						<h2>Software Engineer I</h2>
+						<span class="position">Tata Consultancy Services</span>
+						<p class="mt-4">
+							<ul>
+								<li>Spearheaded automated report generation using Jasper Reports, with password encryption and Java Mail API, saving 120 minutes daily.</li>
+								<li>Optimized PL/SQL procedures and functions, enabling efficient data extraction and analysis, reducing reporting time by 2 hours.</li>
+								<li>Crafted comprehensive unit tests with JUnit, Mockito for 20+ core banking features, ensuring code quality and robust financial transactions.</li>
+								<li>Introduced Overdraft against Sovereign Gold Bond with React interfaces using TallwindCSS, generating 100+ applications monthly.</li>
+								<li>Developed an Android Task Management application with Google Firebase, improving task completion rates by 50% and enhancing team
+									communication by 20% through real-time updates and seamless notifications.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6 d-flex"  >
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jul 2021 - Jul 2023</span>
+						<h2>Software Engineer II</h2>
+						<span class="position">Tata Consultancy Services</span>
+						<p class="mt-4">
+							<ul>
+								<li>Integrated third-party loan services into bank's application leveraging RESTful APIs using Spring Boot and key AWS technologies like
+									Lambda, API Gateway, IAM, and CloudWatch leading to a 25% increase in loan applications.</li>
+								<li>Launched real-time Tax Deducted at Source (TDS) tracking system for Cash Withdrawals using RESTful APIs and SQL triggers, increasing
+									paperless transactions by 30% and reducing physical cash movement by 40% per year.</li>
+								<li>Included Spend Analyzer feature in the internet banking app using React Native with JavaScript ES6, boosting engagement by 23%.</li>
+								<li>Collaborated across departments and implemented GitHub CI/CD pipelines to automate the build and deployment of the International
+									Trade Finance module with Core Banking Services, driving a 15% increase in client’s yearly income and $5M profit for the company.</li>
+									<li>Led Agile Sprint planning and retrospectives, ensuring task alignment with business priorities, resulting in 25% improved team efficiency.</li>
+									<li>Conducted Root Cause Analysis to resolve production issues using Scrum framework, minimizing system downtime under 2 hours.</li>
+									<li>Streamlined the deployment and scaling of loan products servicing using Docker and Kubernetes, ensuring high availability, automated
+										recovery, and reducing deployment time by 40%.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6 d-flex" >
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Aug 2023 - May 2025</span>
+    					<h4>Master of Science in Computer Science</h4>
+    					<span class="position">Georgia State University</span>
+    					<p class="mt-4">GPA: 4.0/4.0</p>
+						
+    				</div>
+    			</div>
+
+    			<div class="col-md-6 d-flex">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">May 2015 - May 2019</span>
+    					<h4>Bachelor of Engineering in Electronics &amp; Telecommunication</h4>
+    					<span class="position">St. Francis Institute of Technology</span>
+    					<p class="mt-4">GPA: 4.0/4.0</p>
+    				</div>
+				</div>
+    		</div>
+
+			<div class="row ftco-section " >
+				<h1 class="big-4">Certfications</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">Aug 2024 - Nov 2024</span>
+							<h4>Advance Web Development</h4>
+							<span class="position">CodePath </span>
+							<p class="mt-4">Certified on Web Development course using React, NodeJS</p>
+						</div>
+					</div>
+	
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">May 2024 - Aug 2024</span>
+							<h4> Intermediate Technical Interview Prep</h4>
+							<span class="position">CodePath </span>
+							<p class="mt-4">Certified on Data Structures & Algorithms in Java &amp; Python</p>
+						</div>
+					</div>
+				</div>
+			
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ashwani89n/unlock_arXiv" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ashwani89n/unlock_arXiv">Unlock arXiv Website</a></h3>
+				  <p style="text-align: justify;">An LLM-powered chatbot using Mistral-7B to enhance accessibility and comprehension of arXiv’s scientific literature.</p>
+				</div>
+			  </div>
+			</div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/ashwani89n/TripOTrail" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');" >
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/ashwani89n/TripOTrail">TripOTrail: Your Adventure Awaits!</a></h3>
+                <p style="text-align: justify;">Travel website with real-time trip planning, expense tracking, itinerary customization with API-driven discovery tools.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/ashwani89n/final_project" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/ashwani89n/final_project">Talkin' Panthers</a></h3>
+                <p style="text-align: justify;">Social website where users create, view, sort, upvote, comment, edit, &amp; delete posts with secret key for authentication.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ashwani89n/diy_delight_car" class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ashwani89n/diy_delight_car">The Bolt Bucket: Car Customizer</a></h3>
+				  <p style="text-align: justify;">Website for customizing, previewing, saving, editing, and managing cars with feature validation and total price display.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ashwani89n/data_dashboard" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ashwani89n/data_dashboard">Brewery Store Dashboard</a></h3>
+				  <p style="text-align: justify;">Showcased a dynamic data dashboard with searchable, filterable insights on New York breweries from a public API.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ashwani89n/veni_vici" class="block-20 zoom-effect" style="background-image: url('images/proj_6.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ashwani89n/veni_vici">Veni Vici: Explore Cat Breeds</a></h3>
+				  <p style="text-align: justify;">Fetches and displays cat breed details from a CAT API, allowing users to discover new feline varieties with each click.</p>
+				</div>
+			  </div>
+		 </div>
+		 <!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ashwani89n/series_spotlight" class="block-20 zoom-effect" style="background-image: url('images/proj_7.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ashwani89n/series_spotlight">Series Spotlight</a></h3>
+				  <p style="text-align: justify;">Web application that allows users to discover trending series/ shows by listing them. Time spent: 8 hours spent in total.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ashwani89n/unit3_project" class="block-20 zoom-effect" style="background-image: url('images/proj_8.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ashwani89n/unit3_project">Virtual Community Space</a></h3>
+				  <p style="text-align: justify;">Web App with PostgreSQL database, lets user browse location-based events with unique URLs.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/ashwani89n/mindIt" class="block-20 zoom-effect" style="background-image: url('images/proj_9.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/ashwani89n/mindIt">MindIT: Mindfulness Companion</a></h3>
+				  <p style="text-align: justify;">Mobile app offering guided meditation, relaxation exercises, &amp; stress-reduction techniques to enhance mindfulness.</p>
+				</div>
+			  </div>
+		 </div>
+	  </div>
+    </section>
+
+	
+	<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)"> -->
+			<!-- <div class="container"> -->
+				<!-- <div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div> --> 
+			<!-- </div> -->
+		<!-- </div>
+	</section> -->
+
+    <section class="contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Atlanta, Georgia, USA</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://4049567414">+ 1 (404)-956-7414</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:ashwani.nb9@gmail.com">ashwani.nb9@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download</h3>
+	            <p><a href="https://drive.google.com/file/d/1BhjVZZLDoGEinMHDGSg83WAOHagVnvMs/view?usp=drive_link">Resume</a></p>
+	          </div>
+          </div>
+
+		  <!-- <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rishabhnmishra/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div> -->
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
